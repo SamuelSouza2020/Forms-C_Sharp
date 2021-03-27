@@ -12,6 +12,7 @@ namespace Form_HelloWorld
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //.show significa para mostrar
             MessageBox.Show("Hello World");
         }
     }
