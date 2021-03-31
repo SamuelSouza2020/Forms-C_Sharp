@@ -1,11 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculadora_Basica
@@ -40,7 +33,7 @@ namespace Calculadora_Basica
             num1 = Convert.ToDouble(txtNum1.Text);
             num2 = Convert.ToDouble(txtNum2.Text);
             resultado = num1 + num2;
-            txtResultado.Text = resultado.ToString();
+            txtResultado.Text = resultado.ToString("N2");
         }
 
         private void btnSubtrair_Click(object sender, EventArgs e)
@@ -49,7 +42,7 @@ namespace Calculadora_Basica
             num1 = Convert.ToDouble(txtNum1.Text);
             num2 = Convert.ToDouble(txtNum2.Text);
             resultado = num1 - num2;
-            txtResultado.Text = resultado.ToString();
+            txtResultado.Text = resultado.ToString("N2");
         }
 
         private void btnMultiplicar_Click(object sender, EventArgs e)
@@ -58,7 +51,7 @@ namespace Calculadora_Basica
             num1 = Convert.ToDouble(txtNum1.Text);
             num2 = Convert.ToDouble(txtNum2.Text);
             resultado = num1 * num2;
-            txtResultado.Text = resultado.ToString();
+            txtResultado.Text = resultado.ToString("N2");
         }
 
         private void btnDividir_Click(object sender, EventArgs e)
@@ -67,7 +60,7 @@ namespace Calculadora_Basica
             num1 = Convert.ToDouble(txtNum1.Text);
             num2 = Convert.ToDouble(txtNum2.Text);
             resultado = num1 / num2;
-            txtResultado.Text = resultado.ToString();
+            txtResultado.Text = resultado.ToString("N2");
         }
     }
 }
