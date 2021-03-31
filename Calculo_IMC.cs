@@ -1,18 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Calculo_IMC
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
+ //Bibliotecas
+ using System;
+ using System.Windows.forms;
+ 
+ public Form1()
         {
             InitializeComponent();
             txtResultado.Text = "";
@@ -34,41 +24,34 @@ namespace Calculo_IMC
             if(resultado < 18.5)
             {
                 txtResultado.Text = resultado.ToString("0.00") + " - Abaixo do Peso";
-                MessageBox.Show("Cuidado, está abaixo", "Saco de Osso",
+                MessageBox.Show("Abaixo do Peso", "CUIDADO",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if(resultado < 25)
             {
                 txtResultado.Text = resultado.ToString("N2") + " - Peso Normal";
-                MessageBox.Show("Excelente","Perfect", MessageBoxButtons.OK,
+                MessageBox.Show("Peso Normal","BOM", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
             else if(resultado < 30)
             {
                 txtResultado.Text = resultado.ToString("N2") + " - Sobre Peso";
-                MessageBox.Show("Comendo Muito", "Está Inchando", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Acima do Peso", "CUIDADO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if(resultado < 35)
             {
                 txtResultado.Text = resultado.ToString("N2") + " - Obesidade 1";
-                MessageBox.Show("Comeu todo Estoque", "Super Bola", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Obesidade Nível 1", "CUIDADO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if(resultado < 40)
             {
                 txtResultado.Text = resultado.ToString("N2") + " - Obesidade 2";
-                MessageBox.Show("Comeu todos alimentos da Cidade", "Gordao", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Obesidade Nível 2", "CUIDADO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 txtResultado.Text = resultado.ToString("N2") + " - Obesidade Mórbida";
-                MessageBox.Show("Comeu toda comida do País","Novo Planeta",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Obesidade Nível 3","CUIDADO",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
 
         }
-
-        private void txtAltura_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
-}
