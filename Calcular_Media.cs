@@ -16,12 +16,6 @@ namespace Calcular_Media
         {
             InitializeComponent();
         }
-
-        private void txtNota1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             double num1, num2, num3, resultado;
